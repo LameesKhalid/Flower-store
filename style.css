@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*استخدام الخط*/
+body{
+    font-family:"Quicksand", "sans-serif";
+}
+/*الغاء النقاط مال ليست*/
+ul{
+    list-style: none;
+
+}
+a {
+    text-decoration: none;
+}
+/*ال continer مال ال about اريد اخليه بالوسط */
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* classes مال لون التيكست مال اسم المتجر */ 
+.primary-text{
+    color: #AA5555;
+}
+/*يتطبق على كل ال links*/
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+}
+/*الزر مال book a flower اريده يكون ب خصائص معينة*/
+.btn-primary{
+    color: #fff;
+    border: 1px, solid, #fff;
+}
+/*من اريد امرر الماوس على ال book a flower يكون لونه وردي*/
+.btn-primary:hover{
+    color: #AA5555;
+}
+   
+
+/*navbar begin*/
+/*تعديل خلفية الصورة */
+header{
+    /*حجم الصورة*/
+    height: 100vh;
+    /* الصورة */
+    background-image: url("./img/background6.jpg") ;
+    /*يسوي كوفر ل كل الصفحة*/
+    background-size: cover; 
+     /* البوزيشن مال صورة سنتر*/
+    background-position: center; 
+    /*  ما اريدها تتكرر الصورة */
+    background-repeat: no-repeat;
+    position: relative;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #ED9277;*/
+    align-items: center;
+}
+/*صورة اللوكو*/
+#navbar img{
+    width: 80px;
+    margin-left:   100px;
+}
+#navbar ul{
+    display: flex;
+    margin-right: 100px;
+}
+/*ال list وال link يلي بال nav يكون لونهم ابيض والخط 600*/
+#navbar ul li a {
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: 600;
+}
+/*الخط يلي جوه كل اسم فوك*/
+#navbar ul li a:hover{
+    border-bottom:2px solid #AA5555 ;
+}
+
+/*الكتابة اريدها بالوسط يلي تعادل 75 من الشاشة الكلية */
+header .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+/*اللون مال h1*/
+header .content h1{
+    font-size: 40px;
+    color: #fff;
+}
+/*الباركراف */
+header .content p{
+    margin: 20px 0 40px;
+    color: #fff;
+}
+
+/*شفافية خلفية الصورة*/
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.6);
+
+}
+/*اخلي كل المحتوى بالهيدر واضح وهل شغله ضروري اذا اريد اسوي مثل الاخفات بالخلفية */
+
+header *{
+    z-index: 10;
+}
+/*navbar end*/
+
+/*about section start*/
+#About{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+/*تعديل ال h1 و ال p يلي موجود بال تايتل*/
+#About .title ,
+#Flowers .title
+{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+/*The Flower Lover History*/
+#About .title ,
+#Flowers .title h2 
+{
+    font-size: 40px;
+    color:#383848;
+    margin-bottom: 20px;
+}
+/*More than +10 years of experiance*/
+#About .title p
+
+{
+    font-size: 14px;
+    color: #9a9a9a;
+    font-weight: 600;
+}
+
+#About .About-content {
+    display: flex;
+    justify-content: space-between;
+}
+/*about img*/
+#About .About-content img{
+    width: 300px;
+    height: 300px;
+}/*Roses are beautiful flowers known for
+         their diverse colors and fragrant scent,
+          and they are a symbol of beauty and romance 
+          in many cultures around the world.
+           Roses come in different shapes and colors such as
+            red, white, pink, yellow, and others, and each color carries a special meaning. 
+           Roses are one of the oldest plants cultivated by humans, 
+        and new species have been hybridized over the ages, 
+        resulting in a great diversity in their shapes and colors.*/
+#About .About-content p{
+    color:#9a9a9a;
+    font-size: 500;
+    margin-right: 7rem;
+    line-height: 1.6;
+}
+/*about section end*/
+
+
+/*flowers section start*/
+#Flowers {
+    background: #f4f4f4;
+    padding: 5rem 0;
+}
+#Flowers .title p
+
+{
+    font-size: 14px;
+    color: #9a9a9a;
+    font-weight: 600;
+}
+
+#Flowers .menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*تعديل الصور */
+#Flowers .menu-items .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+/*نخلي عرض الصورة وبشكل دائري*/
+#Flowers .menu-items .menu-item img{
+    width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#Flowers .menu-items .menu-item h3{
+    color: #383848;
+    border-bottom: 1px dashed #9a9a9a;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+#Flowers .menu-items .menu-item span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#Flowers .btn{
+    display: block;
+    margin: 20px auto 0;
+    background: #AA5555;
+    color: #fff;
+    cursor: pointer;
+}
+#Flowers .btn:hover{
+    background: #383848;
+
+}
+
+/*flowers section end*/
+/*******************************************************************/
+/*content section start*/
+#contact {
+    background: #f4f2ed;
+    padding: 5rem 0;
+  }
+  
+  #contact .container {
+    max-width: 900px;
+  }
+  
+  #contact .contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #contact .contact-info {
+    width: 50%;
+  }
+  
+  #contact .contact-info div {
+    margin: 30px 0;
+    line-height: 1.7;
+  }
+  
+  #contact .contact-info h3 {
+    font-size: 28px;
+    color: #383848;
+    margin-bottom: 10px;
+  }
+  
+  #contact .contact-info p {
+    color: #9a9a9a;
+  }
+  
+  #contact .contact-info p i {
+    color: #e4b95b;
+    margin-right: 5px;
+  }
+  
+  #contact .contact-info a i {
+    color: #fff;
+    background: #383848;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+  
+  #contact .contact-info a i:hover {
+    background-color: #e4b95b;
+    color: #383848;
+  }
+  
+  form {
+    width: 50%;
+  }
+  
+  form input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: none;
+    background-color: #e3e2dd;
+  }
+  
+  form input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  
+  form button {
+    color: #383848;
+  }
+
+/*content section end*/
+
+/****************************/
+#footer {
+    background-color: #383848;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  
